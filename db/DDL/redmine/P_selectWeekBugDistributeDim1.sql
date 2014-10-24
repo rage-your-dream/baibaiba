@@ -1,0 +1,20 @@
+DELIMITER $$
+
+USE `redmine`$$
+
+DROP PROCEDURE IF EXISTS `selectWeekBugDistributeDim1`$$
+
+CREATE DEFINER=`redmine`@`10.6.196.100` PROCEDURE `selectWeekBugDistributeDim1`()
+BEGIN
+CALL selectBugAssignDate(SUBDATE(CURDATE(),DATE_FORMAT(CURDATE(),'%w')-1));
+SELECT CASE StatusId WHEN 1 THEN 'new' WHEN 2 THEN 'fixed' WHEN 5 THEN 'closed' WHEN 8 THEN 'closed' WHEN 9 THEN 'closed' WHEN 22 THEN 'reopen' END AS `name`,
+COUNT(BugID) AS `y`,CASE StatusId WHEN 1 THEN '#42A07B' WHEN 2 THEN '#9B5E4A' WHEN 5 THEN '#514F78' WHEN 8 THEN '#514F78' WHEN 9 THEN '#514F78' WHEN 22 THEN '#1F949A' END AS color 
+FROM tem_bug 
+WHERE StatusId IN(1,2,5,8,9,22) 
+AND CreateTime > SUBDATE(CURDATE(),DATE_FORMAT(CURDATE(),'%w')-1) 
+GROUP BY `name` 
+ORDER BY StatusId ;
+DROP TEMPORARY TABLE tem_bug;
+    END$$
+
+DELIMITER ;

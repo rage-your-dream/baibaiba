@@ -1,0 +1,9 @@
+mb_convert_encoding($info[0]["displayname"][0],"utf-8","gbk");
+这个方法用于将GBK字符码转换为UTF-8
+
+$("#email")[0].selectionEnd=0;
+将输入框光标放到最前面
+
+<a href="post.php?target=moboconfluence" target="_blank">
+target="_blank" 打开新标签
+

@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+.nav_bar{
+	background-color:#cccccc;
+	height:5px;
+}
+.nav_bar_active{
+	background-color:#3399CC;
+	height:5px;
+}

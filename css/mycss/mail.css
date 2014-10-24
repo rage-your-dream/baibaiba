@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+#modal{
+		modal
+		z-index:1000;
+	}
+	.mail_input{
+		padding:5px;
+		margin:10px;
+		border:2px solid #0099CC;
+		font-size:14;
+		border-radius:3px;
+	}
+	
+	#snap_img{
+		max-height:300px;
+		overflow:scroll;
+		padding:5px;
+		border-radius:3px;
+		margin:10px;
+	}
+	#send_mail{
+		background-color:#00A65A;
+		color:#FFF;
+		padding:5px 20px;
+	}
+	#mail_result{
+		position: fixed;
+		top:200px;
+		left:10%;
+	}

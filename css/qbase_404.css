@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+body{
+	background-color:white;
+	color:black;
+	TEXT-ALIGN: center;
+}
+#imgbd{
+	border: gray 1px solid; 
+	magin-top: 10px; 
+	border-radius: 15px;
+
+
+
+}
+p{
+	font-family:微软雅黑;
+	font-size:20px;
+	margin-bottom:30px;
+}
+#p1{
+	FONT-SIZE: 24px; 
+	LINE-HEIGHT: 70px;
+}
+
+a{
+	color:#00FFFF;
+	font-style:italic;
+	font-family:宋体;
+}

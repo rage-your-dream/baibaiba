@@ -1,0 +1,14 @@
+DELIMITER $$
+
+USE `redmine`$$
+
+DROP PROCEDURE IF EXISTS `selectWeekTotalBug`$$
+
+CREATE DEFINER=`redmine`@`10.6.196.100` PROCEDURE `selectWeekTotalBug`()
+BEGIN
+CALL selectBugAssignDate(SUBDATE(CURDATE(),DATE_FORMAT(CURDATE(),'%w')-1));
+SELECT COUNT(*) AS total FROM tem_bug WHERE CreateTime > SUBDATE(CURDATE(),DATE_FORMAT(CURDATE(),'%w')-1);
+DROP TEMPORARY TABLE tem_bug;
+    END$$
+
+DELIMITER ;

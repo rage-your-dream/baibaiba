@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+body {
+	
+	width:100%;
+	height:100%;
+	min-height:900px;
+}
+
+
+.title_row{
+	padding:20px;
+	border-bottom:  1px solid #00CCFF ;
+	box-shadow: 0px 0px 3px #999999;
+}
+
+.chart_help_msg P,.chart_help_msg H3,.chart_help_msg H4,.chart_help_msg H5{
+	color: #cccccc;
+}
+	
+.ichart_help_msg{
+  position: absolute;
+	top:0px;
+  left:0px;
+	padding:20px;
+	color: #cccccc;
+	background-color: rgba(33,33,33,0.6);
+	height:100%;
+	width:100%;
+	border-radius: 3px;
+	border: 1px solid gray;
+	box-shadow: 1px 1px 1px #cccccc;
+	display: none;
+}
+.ichart_analysis_msg{
+	position: absolute;
+	right:0px;
+	background-color: rgba(255,255,255,0.6);
+	width:30%;
+	height:100%;
+	bottom:0px;
+	border-radius: 0px 3px 3px 0px;
+	padding:10px;
+}
+	
